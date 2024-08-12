@@ -54,7 +54,8 @@
 	"dependencies": {
 		"emoji-regex": "^10.3.0",
 		"get-east-asian-width": "^1.0.0",
-		"strip-ansi": "^7.1.0"
+		"strip-ansi": "^7.1.0",
+		"grapheme-splitter": "^1.0.4"
 	},
 	"devDependencies": {
 		"ava": "^5.3.1",

@@ -1,8 +1,9 @@
 import stripAnsi from 'strip-ansi';
 import {eastAsianWidth} from 'get-east-asian-width';
 import emojiRegex from 'emoji-regex';
+import GraphemeSplitter from 'grapheme-splitter';
 
-const segmenter = new Intl.Segmenter();
+const splitter = new GraphemeSplitter();
 
 const defaultIgnorableCodePointRegex = /^\p{Default_Ignorable_Code_Point}$/u;
 
@@ -27,7 +28,7 @@ export default function stringWidth(string, options = {}) {
 	let width = 0;
 	const eastAsianWidthOptions = {ambiguousAsWide: !ambiguousIsNarrow};
 
-	for (const {segment: character} of segmenter.segment(string)) {
+	for (const character of splitter.splitGraphemes(string)) {
 		const codePoint = character.codePointAt(0);
 
 		// Ignore control characters

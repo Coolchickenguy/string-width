@@ -14,7 +14,7 @@
 	"exports": {
 		"types": "./index.d.ts",
 		"import": "./index.js",
-		"require": "./commonjs/bundle.cjs"
+		"require": "./dist/bundle.cjs"
 	},
 	"sideEffects": false,
 	"engines": {

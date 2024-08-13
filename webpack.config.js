@@ -5,7 +5,7 @@ const dirPath = dirname(fileURLToPath(import.meta.url));
 const config = {
 	entry: resolve(dirPath, './index.js'),
 	output: {
-		path: resolve(dirPath, 'commonjs'),
+		path: resolve(dirPath, 'dist'),
 		filename: 'bundle.cjs',
 	},
 	experiments: {

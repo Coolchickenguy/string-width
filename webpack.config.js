@@ -7,6 +7,9 @@ const config = {
 	output: {
 		path: resolve(dirPath, 'dist'),
 		filename: 'bundle.cjs',
+		library: {
+			type: 'commonjs',
+		},
 	},
 	experiments: {
 		outputModule: true,

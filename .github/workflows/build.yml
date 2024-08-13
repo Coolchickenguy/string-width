@@ -11,4 +11,5 @@ jobs:
           node-version: 'v20'
       - run: npm install
       - run: npm run build
-      - uses: stefanzweifel/git-auto-commit-action@v4
+      - run: git commit -m "build"
+      - uses: stefanzweifel/git-auto-commit-action@v5
